@@ -1,1 +1,0 @@
-export const JWT_SECRETS = "!43435ANIKETMYROOMMATE";

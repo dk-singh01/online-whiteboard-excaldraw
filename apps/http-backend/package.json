@@ -10,12 +10,16 @@
   },
   "dependencies": {
     "@repo/typescript-config": "workspace:*",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "json": "^11.0.0",
+    "jsonwebtoken": "^9.0.2"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/express": "^5.0.1"
+    "@types/express": "^5.0.1",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@repo/backend-common": "workspace:*"
   }
 }

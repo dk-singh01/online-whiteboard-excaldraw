@@ -1,11 +1,12 @@
 
 
 import express from "express";
-
-import { Request, request, response } from "express";
+import jwt from "jsonwebtoken";
+import  middleware  from "../middleware";
+import { JWT_SECRETS } from "./config";
 const app = express();
 
-app.post("/api/v1/signup", (req, res)=>{
+app.post("/signup", (req, res)=>{
     const user = req.body.user;
     const password = req.body.password;
 
@@ -16,19 +17,31 @@ app.post("/api/v1/signup", (req, res)=>{
 
 });
 
-app.get("/api/v1/signin", (req:Request,res:Response)=>{
+app.get("/signin", (req, res)=>{
+ 
+    const userId = 1;
+    const token = jwt.sign({
+        userId
+    }, JWT_SECRETS);
+
+    res.json({
+        token
+    })
 
 
 });
 
-app.get("/api/v1/create-room", (req:Request,res:Response)=>{
+app.get("/create-room",middleware, (req, res)=>{
+    //db call here
+
+
+
+    res.json({
+        roomId : 1212,
+    })
 
 
 });
 
-app.get("/", (req:Request,res:Response)=>{
 
-
-});
-
-app.listen(3000, console.log("listening on port 3000"));
+app.listen(3000);
