@@ -20,6 +20,7 @@
   "devDependencies": {
     "@types/express": "^5.0.1",
     "@types/jsonwebtoken": "^9.0.9",
-    "@repo/backend-common": "workspace:*"
+    "@repo/backend-common": "workspace:*",
+    "@repo/common": "workspace:*"
   }
 }
