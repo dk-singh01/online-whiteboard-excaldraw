@@ -5,6 +5,7 @@ import jwt from "jsonwebtoken";
 import  {middleware}  from "./middleware.ts";
 import {JWT_SECRETS} from "@repo/backend-common/config";
 import {CreateUserSchema} from "@repo/common/types";
+import {PrismaClient}  frpm "@repo/db/client";
 
 const app = express();
 
